@@ -28,6 +28,7 @@ public type InvalidIsoCodeError record {|
 |};
 
 public type ErrorMsg record {|
+
     string errmsg;
 |};
 

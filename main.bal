@@ -132,7 +132,7 @@ service / on new http:Listener(9001) {
 
 service on vaccineStatusListener {
     resource function get vaccination/status() returns string {
-        log:printInfo("Vaccination status");
+        log:printInfo("Vaccination status overview");
         return "Vaccination is in progress";
     }
 }

@@ -125,7 +125,7 @@ service /covid/status on new http:Listener(9000) {
 
 service / on new http:Listener(9001) {
     resource function get healthz() returns string {
-        log:printInfo("Healthzzz!");
+        log:printInfo("Healthz!");
         return "OK";
     }
 }

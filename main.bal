@@ -130,13 +130,6 @@ service / on new http:Listener(9001) {
     }
 }
 
-service / on new http:Listener(9098) {
-    resource function get healthz() returns string {
-        log:printInfo("Health check");
-        return "OK";
-    }
-}
-
 service on new http:Listener(9097) {
     resource function get healthz() returns string {
         log:printInfo("Health check");

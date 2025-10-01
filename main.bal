@@ -147,7 +147,7 @@ service on vaccineStatusListener {
 service /covid/community/support on new http:Listener(9003) {
     resource function get status() returns string {
         log:printInfo("Community support status");
-        return "World is supporting each other";
+        return "Aids received";
     }
 
     resource function get status/[string isoCode]() returns string {

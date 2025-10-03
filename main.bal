@@ -66,7 +66,7 @@ service /covid19 on new graphql:Listener(9094) {
     }
 
     resource function get filter(string isoCode) returns CovidData? {
-        log:printInfo("Get country by ISO Code: ");
+        log:printInfo("Get country by ISO Code");
         if covidEntriesTable.hasKey(isoCode) {
             return new CovidData(covidEntriesTable.get(isoCode));
         }

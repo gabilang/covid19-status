@@ -84,7 +84,7 @@ service /covid19 on new graphql:Listener(9094) {
 service /covid/status on new http:Listener(9000) {
 
     resource function get countries() returns CovidEntry[] {
-        log:printInfo("Get all countries");
+        log:printInfo("Get all countries: ");
         return covidEntriesTable.toArray();
     }
 

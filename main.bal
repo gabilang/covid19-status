@@ -99,7 +99,7 @@ service /covid/status on new http:Listener(9000) {
             log:printInfo("Conflicting ISO Codes");
             return {
                 body: {
-                    errmsg: string:'join(" ", "Conflicting ISO Codes:", ...conflictingISOs)
+                    errmsg: string:'join(" ", "Conflicting ISO Codes: ", ...conflictingISOs)
                 }
             };
         } else {

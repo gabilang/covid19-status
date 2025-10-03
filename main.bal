@@ -74,7 +74,7 @@ service /covid19 on new graphql:Listener(9094) {
     }
 
     remote function add(CovidEntry entry) returns CovidData {
-        log:printInfo("Adding new countries");
+        log:printInfo("Adding new countries: ");
         covidEntriesTable.add(entry);
         return new CovidData(entry);
     }
